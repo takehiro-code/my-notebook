@@ -1,0 +1,7 @@
+
+# ignore folder named "data"
+data/
+.ipynb_checkpoints/
+
+# ignore all csv files
+*.csv

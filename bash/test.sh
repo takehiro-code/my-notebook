@@ -54,3 +54,5 @@ x=2
 y=3
 echo "(${x},${y})"
 
+uuid=$(uuidgen)
+echo one_iter_${uuid}.txt

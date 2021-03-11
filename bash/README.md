@@ -21,8 +21,25 @@ or more in compact,
 
 `du -hcs your_directory`
 
+To count the number of files in a directory, using a tree comand,
+
+`tree DIRECTORY`
 
 To exit the shell program, `exit 0` 
+
+To create an array,
+
+`arr=(1 2 3 4 9)`
+
+To access this array,
+
+`${arr[@]}` You need `[@]` because without this, you will only get the first element of the array, which is 1.
+
+To access the array elements but excluding the last element,
+
+`${arr[@]::${#arr[@]}-1}`
+
+
 
 Double quotation can consists of variables
 
@@ -33,6 +50,23 @@ Double quotation can consists of variables
 But single quatation cannot consists of variables but instead takes name of the variable itself,
 
 `echo '(${x},${y})'` => (${x},${y})
+
+For if .. elif .. else statements, basic syntax is as following. Make sure to have spaces between single bracket, variable, etc.
+
+```
+if [ $var == $otherVar ]
+then
+   SOME_COMMAND
+elif [ $var == $otherVar ]
+then
+    SOME_COMMAND
+else
+    SOME_COMMAND
+fi
+```
+You can put semicolon `;` to make `then` inline as,
+
+`if [ $var == $otherVar ]; then`
 
 To generate the unique id in bash script and save it the variable,
 

@@ -2,6 +2,7 @@
 # ignore folder named "data"
 data/
 .ipynb_checkpoints/
+.vscode/
 
 # ignore all csv files
 *.csv

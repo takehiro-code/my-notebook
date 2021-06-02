@@ -1,5 +1,10 @@
 ## Jupyter Notebook
 
+The following code will fit cell to the screen, expanding the width of the cell. 
+`from IPython.core.display import display, HTML`
+`display(HTML("<style>.container { width:100% !important; }</style>"))`
+
+
 ### pandas
 
 To modify the maximum number of rows/columns/width to be shown, do the following,

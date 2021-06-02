@@ -1,6 +1,18 @@
-## Bash Note
+# Bash Note
 
-### General
+## Table of Contents
+1. [On the Shell](#on_the_shell)
+2. [Shell Scripting](#shell_scripting)
+3. [Conda](#conda)
+4. [Git](#git)
+___________________
+
+## On the Shell <a name="on_the_shell"></a>
+
+To check OS version,
+
+`cat /etc/os-release`
+
 To measure the time,
 
 `time <SOME_COMMAND>`
@@ -24,6 +36,62 @@ or more in compact,
 To count the number of files in a directory, using a tree comand,
 
 `tree DIRECTORY`
+
+To see the task manager like info such as memory usage,
+
+To count the number of words,
+
+`wc [OPTION] [FILE]`
+OPTION `-l` counts the number of lines.
+
+`top`
+
+To filter with the specific column such as USER,
+
+`top -o USER`
+
+The more interactive and intuitive version,
+
+`htop`
+
+To display the disk space,
+
+`df -h`
+
+including the total,
+
+`df -u --total`
+
+To show the gpu/cuda usage stats, first install with `pip install gpustats`, then type `gpustats` to show the usage information. See github which I starred.
+
+To backup data with tar,
+
+`tar -czf NAME.tgz <filename or directory name>`
+For example,
+`tar -czf backup_thesis.tgz thesis`
+
+To unzip,
+
+`tar -xf <fileanme or directory name>`
+
+To compress the data with zip command,
+
+`zip archivename.zip filename1 filename2 filename3`
+
+To unzip the files to a newly created folder,
+
+`unzip archivename.zip -d foldername` 
+
+To show the terminal output and save to file,
+
+`<COMMAND> | tee <FILE>`
+
+To show the currently login users and processes,
+
+`w` or `who` or `users`
+___________________
+
+## Shell Scripting <a name="shell_scripting"></a>
 
 To exit the shell program, `exit 0` 
 
@@ -72,8 +140,8 @@ To generate the unique id in bash script and save it the variable,
 
 `uuid=$(uuidgen)`
 
-
-### Conda
+___________________
+## Conda <a name="conda"></a>
 
 
 When you use miniconda3 in linux, first bash command to go to your shell
@@ -114,8 +182,8 @@ Shortcut:
 - `screen -ls` to list the current running sessions
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> and <kbd>Esc</kbd> to enter scrolling mode. Press <kbd>Esc</kbd> again to exit the scrolling mode.
 
-
-### Git
+___________________
+## Git <a name="git"></a>
 
 To reset all stashed stages from `git add <FILES>` do,
 

@@ -119,6 +119,7 @@ But single quatation cannot consists of variables but instead takes name of the 
 
 `echo '(${x},${y})'` => (${x},${y})
 
+### Conditional Statements
 For if .. elif .. else statements, basic syntax is as following. Make sure to have spaces between single bracket, variable, etc.
 
 ```
@@ -135,6 +136,39 @@ fi
 You can put semicolon `;` to make `then` inline as,
 
 `if [ $var == $otherVar ]; then`
+
+For multiple conditions using logical operators,
+
+`if [ $var1 == $var2 ] || [ $var1 == $var3 ]`
+
+### Comparison operators
+For integer comparisons. See for more detail: https://tldp.org/LDP/abs/html/comparison-ops.html.
+
+`if [ $var1 -eq $var2 ]`
+
+equal: `-eq` 
+
+not equal: `-ne` 
+
+greater than: `-gt` 
+
+greater than or equal: `-ge`
+
+less than: `-lt` 
+
+less than or equal: `-le`
+
+For string comparison,
+
+`if [ $var1 > $var2 ]`
+
+equal: `==` 
+
+not equal: `!=` 
+
+Python equivalent to `pass`: `;`
+
+Python equivalent to `continue`: `continue` (same!)
 
 To generate the unique id in bash script and save it the variable,
 
